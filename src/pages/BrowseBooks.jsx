@@ -5,10 +5,14 @@ import SearchBar from '../components/SearchBar'
 import booksData from '../data/booksData'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
+import { useSelector } from 'react-redux';
 
 function BrowseBooks() {
   const { category } = useParams()
   const [searchTerm, setSearchTerm] = useState('')
+
+const books = useSelector((state) => state.books)
+console.log(books)
 
   const filteredByCategory = category
     ? booksData.filter((book) => book.category === category)
