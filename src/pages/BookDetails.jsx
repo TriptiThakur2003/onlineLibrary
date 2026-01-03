@@ -1,5 +1,5 @@
 // src/pages/BookDetails.jsx
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import booksData from '../data/booksData'
 
@@ -13,6 +13,11 @@ function BookDetails() {
       <>
         <Navbar />
         <h2 className="text-center mt-4">Book not found</h2>
+        <div className="text-center mt-3">
+          <Link to="/books" className="btn btn-secondary">
+            Back to Browse Books
+          </Link>
+        </div>
       </>
     )
   }
@@ -30,6 +35,10 @@ function BookDetails() {
         <p>
           <strong>Rating:</strong> {book.rating} / 5
         </p>
+
+        <Link to="/books" className="btn btn-secondary mt-3">
+          Back to Browse Books
+        </Link>
       </div>
     </>
   )
