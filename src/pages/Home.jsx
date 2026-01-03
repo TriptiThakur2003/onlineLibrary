@@ -1,6 +1,13 @@
 // src/pages/Home.jsx
+import Navbar from "../components/Navbar"
+
 function Home() {
-  return <h1>Home Page</h1>
+  return (
+    <>
+        <Navbar />
+        <h1>Home Page</h1>
+    </>
+    )
 }
 
 export default Home
