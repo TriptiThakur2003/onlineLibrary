@@ -14,9 +14,22 @@ function AddBook() {
   const [category, setCategory] = useState('')
   const [description, setDescription] = useState('')
   const [rating, setRating] = useState('')
+  const [error, setError] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    // Required fields validation
+    if (!title || !author || !category) {
+      setError('Title, Author, and Category are required.')
+      return
+    }
+
+    // Rating validation
+    if (rating && (rating < 1 || rating > 5)) {
+      setError('Rating must be between 1 and 5.')
+      return
+    }
 
     const newBook = {
       id: Date.now(),
@@ -38,9 +51,11 @@ function AddBook() {
       <div className="container mt-4">
         <h1 className="text-center mb-4">Add New Book</h1>
 
+        {error && <div className="alert alert-danger">{error}</div>}
+
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">Title</label>
+            <label className="form-label">Title *</label>
             <input
               type="text"
               className="form-control"
@@ -50,7 +65,7 @@ function AddBook() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Author</label>
+            <label className="form-label">Author *</label>
             <input
               type="text"
               className="form-control"
@@ -60,11 +75,10 @@ function AddBook() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Category</label>
+            <label className="form-label">Category *</label>
             <input
               type="text"
               className="form-control"
-              placeholder="e.g. fiction, sci-fi"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             />
@@ -81,7 +95,7 @@ function AddBook() {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Rating</label>
+            <label className="form-label">Rating (1–5)</label>
             <input
               type="number"
               className="form-control"
