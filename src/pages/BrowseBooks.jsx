@@ -1,15 +1,23 @@
 // src/pages/BrowseBooks.jsx
 import Navbar from '../components/Navbar'
 import BookCard from '../components/BookCard'
+import SearchBar from '../components/SearchBar'
 import booksData from '../data/booksData'
 import { useParams } from 'react-router-dom'
+import { useState } from 'react'
 
 function BrowseBooks() {
   const { category } = useParams()
+  const [searchTerm, setSearchTerm] = useState('')
 
-  const filteredBooks = category
+  const filteredByCategory = category
     ? booksData.filter((book) => book.category === category)
     : booksData
+
+  const filteredBooks = filteredByCategory.filter((book) =>
+    book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    book.author.toLowerCase().includes(searchTerm.toLowerCase())
+  )
 
   return (
     <>
@@ -20,6 +28,11 @@ function BrowseBooks() {
           {category ? `${category.toUpperCase()} Books` : 'Browse Books'}
         </h1>
 
+        <SearchBar
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+        />
+
         <div className="row">
           {filteredBooks.length > 0 ? (
             filteredBooks.map((book) => (
@@ -28,7 +41,7 @@ function BrowseBooks() {
               </div>
             ))
           ) : (
-            <p className="text-center">No books found in this category.</p>
+            <p className="text-center">No books match your search.</p>
           )}
         </div>
       </div>
