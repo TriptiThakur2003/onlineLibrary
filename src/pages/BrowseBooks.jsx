@@ -2,21 +2,19 @@
 import Navbar from '../components/Navbar'
 import BookCard from '../components/BookCard'
 import SearchBar from '../components/SearchBar'
-import booksData from '../data/booksData'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux'
 
 function BrowseBooks() {
   const { category } = useParams()
   const [searchTerm, setSearchTerm] = useState('')
 
-const books = useSelector((state) => state.books)
-console.log(books)
+  const books = useSelector((state) => state.books)
 
   const filteredByCategory = category
-    ? booksData.filter((book) => book.category === category)
-    : booksData
+    ? books.filter((book) => book.category === category)
+    : books
 
   const filteredBooks = filteredByCategory.filter((book) =>
     book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
