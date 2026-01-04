@@ -1,19 +1,24 @@
 .app-wrapper {
   background-color: #fce2d1;
 }
+
 .formCard {
   max-width: 600px;
 }
+
 .maxWidthh {
   max-width: 1100px !important;
 }
+
 .mainText {
   font-size: 3rem;
   font-weight: bolder;
 }
+
 .text-brown {
   color: #5a3c3d;
-} /* Orange Button */
+}
+
 .btn-orange {
   background-color: #ff7e00;
   border-color: #ff7e00;
@@ -25,7 +30,6 @@
   transform: translateY(0) scale(1);
 }
 
-/* Hover Animation */
 .btn-orange:hover {
   background-color: #e86f00;
   border-color: #e86f00;
@@ -39,7 +43,6 @@
   width: 50%;
 }
 
-/* Category Cards */
 .category-card {
   background: linear-gradient(135deg, #fff3e6, #ffffff);
   border-radius: 14px;
@@ -52,7 +55,6 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Category Images */
 .category-img {
   height: 140px;
   object-fit: cover;
@@ -70,10 +72,6 @@ section {
 .category-card:hover .category-img {
   transform: scale(1.1);
 }
-
-/* =======================
-   MODERN GLASS NAVBAR
-======================= */
 
 .custom-navbar {
   top: 20px !important;
@@ -97,15 +95,11 @@ section {
   border-color: #ff7e00;
 }
 
-/* Navbar subtle hover lift */
 .custom-navbar:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 45px rgba(0, 0, 0, 0.16);
 }
 
-/* =======================
-   BRAND
-======================= */
 .navbar-brand {
   font-size: 1.4rem;
   font-weight: 700;
@@ -119,9 +113,6 @@ section {
   transform: scale(1.05);
 }
 
-/* =======================
-   NAV LINKS
-======================= */
 .custom-link {
   position: relative;
   font-weight: 500;
@@ -131,13 +122,11 @@ section {
   transition: all 0.3s ease;
 }
 
-/* Hover background glow */
 .custom-link:hover {
   color: #ff7e00 !important;
   background: rgba(255, 126, 0, 0.12);
 }
 
-/* Underline animation */
 .custom-link::after {
   content: "";
   position: absolute;
@@ -154,7 +143,6 @@ section {
   width: 60%;
 }
 
-/* Active state */
 .custom-link.active {
   color: #ff7e00 !important;
   background: rgba(255, 126, 0, 0.15);
@@ -164,9 +152,6 @@ section {
   width: 60%;
 }
 
-/* =======================
-   TOGGLER (MOBILE)
-======================= */
 .navbar-toggler {
   border: none;
   box-shadow: none;
@@ -176,9 +161,6 @@ section {
   box-shadow: none;
 }
 
-/* =======================
-   MOBILE OPTIMIZATION
-======================= */
 @media (max-width: 767px) {
   .custom-navbar {
     border-radius: 24px;
@@ -192,10 +174,8 @@ section {
   .custom-link {
     justify-content: center;
     display: flex;
-  }
-}
-
-@media (max-width: 767px) {
+  } 
+  
   .mainText {
     text-align: center;
   }
