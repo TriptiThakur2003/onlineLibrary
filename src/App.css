@@ -1,130 +1,150 @@
+/*  Global App Wrapper  */
 .app-wrapper {
-  background-color: #fce2d1;
+  background-color: #fce2d1; /* Light peach background for the whole app */
 }
 
-.formCard {
-  max-width: 600px;
-}
-
+/*  Maximum Width Container  */
 .maxWidthh {
-  max-width: 1100px !important;
+  max-width: 1100px !important; /* Restrict wide content for readability */
 }
 
+/*  Typography  */
 .mainText {
-  font-size: 3rem;
-  font-weight: bolder;
+  font-size: 3rem; /* Large heading for hero section */
+  font-weight: bolder; /* Make it stand out */
 }
 
 .text-brown {
-  color: #5a3c3d;
+  color: #5a3c3d; /* Theme color for headings and important text */
 }
 
+/*  Buttons  */
 .btn-orange {
-  background-color: #ff7e00;
+  background-color: #ff7e00; /* Orange theme button */
   border-color: #ff7e00;
-  color: #fff;
+  color: #fff; /* White text */
   text-decoration: none;
 
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 126, 0, 0.25);
+  transition: all 0.3s ease; /* Smooth hover transitions */
+  box-shadow: 0 4px 12px rgba(255, 126, 0, 0.25); /* Subtle shadow */
   transform: translateY(0) scale(1);
 }
 
 .btn-orange:hover {
-  background-color: #e86f00;
+  background-color: #e86f00; /* Darker orange on hover */
   border-color: #e86f00;
   color: #fff;
 
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 126, 0, 0.35);
+  transform: translateY(-3px) scale(1.05); /* Slight lift and scale */
+  box-shadow: 0 8px 20px rgba(255, 126, 0, 0.35); /* Bigger shadow on hover */
 }
 
-.booksImage {
-  width: 50%;
+/*  Form Card  */
+.formCard {
+  max-width: 600px; /* Restrict width of forms */
 }
 
-.category-card {
-  background: linear-gradient(135deg, #fff3e6, #ffffff);
-  border-radius: 14px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.category-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.category-img {
-  height: 140px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-section {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.category-card:hover .category-img {
-  transform: scale(1.1);
-}
-
-.custom-navbar {
-  top: 20px !important;
-  width: 100%;
-  max-width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border-radius: 999px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-  transition: all 0.35s ease;
-}
+/* Form input focus effect */
 .formCard input[type="text"] {
   transition: all 0.3s ease;
 }
 
 .formCard input[type="text"]:focus {
-  box-shadow: 0 0 10px rgba(255, 126, 0, 0.4);
-  border-color: #ff7e00;
+  box-shadow: 0 0 10px rgba(255, 126, 0, 0.4); /* Glow effect */
+  border-color: #ff7e00; /* Orange border on focus */
+}
+
+/*  Images  */
+.booksImage {
+  width: 50%; /* Hero section image width */
+}
+
+.category-card {
+  background: linear-gradient(135deg, #fff3e6, #ffffff); /* Subtle gradient */
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer; /* Indicate clickability */
+}
+
+.category-card:hover {
+  transform: translateY(-8px) scale(1.03); /* Lift and scale on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
+
+.category-img {
+  height: 140px;
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-img {
+  transform: scale(1.1); /* Zoom image on hover */
+}
+
+/*  Sections  */
+section {
+  min-height: 90vh; /* Ensure hero sections fill most of the screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  Navbar Styling  */
+.custom-navbar {
+  top: 20px !important; /* Slightly below top of viewport */
+  width: 100%;
+  max-width: 1150px; /* Align with container width */
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(18px); /* Blur behind navbar */
+  -webkit-backdrop-filter: blur(18px); /* Safari support */
+  border-radius: 999px; /* Fully rounded */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12); /* Subtle shadow */
+  transition: all 0.35s ease;
 }
 
 .custom-navbar:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.16);
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.16); /* Deeper shadow */
 }
 
 .navbar-brand {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #ff7e00 !important;
+  color: #ff7e00 !important; /* Orange brand text */
   letter-spacing: 0.4px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .navbar-brand:hover {
-  color: #e86f00 !important;
-  transform: scale(1.05);
+  color: #e86f00 !important; /* Darker orange on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none; /* Remove default focus shadow */
+}
+
+/* Navbar links */
 .custom-link {
   position: relative;
   font-weight: 500;
   color: #333 !important;
   padding: 8px 14px;
-  border-radius: 999px;
+  border-radius: 999px; /* Pill-shaped links */
   transition: all 0.3s ease;
 }
 
 .custom-link:hover {
   color: #ff7e00 !important;
-  background: rgba(255, 126, 0, 0.12);
+  background: rgba(255, 126, 0, 0.12); /* Subtle background */
 }
 
 .custom-link::after {
@@ -140,7 +160,7 @@ section {
 }
 
 .custom-link:hover::after {
-  width: 60%;
+  width: 60%; /* Underline animation */
 }
 
 .custom-link.active {
@@ -152,15 +172,7 @@ section {
   width: 60%;
 }
 
-.navbar-toggler {
-  border: none;
-  box-shadow: none;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
+/*  Responsive Styles  */
 @media (max-width: 767px) {
   .custom-navbar {
     border-radius: 24px;
@@ -174,16 +186,18 @@ section {
   .custom-link {
     justify-content: center;
     display: flex;
-  } 
-  
+  }
+
   .mainText {
     text-align: center;
   }
+
   .nav-link {
     justify-content: center;
     display: flex !important;
   }
+
   .booksImage {
-    width: 100% !important;
+    width: 100% !important; /* Make hero image full width on mobile */
   }
 }
