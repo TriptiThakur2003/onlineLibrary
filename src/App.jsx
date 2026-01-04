@@ -1,12 +1,13 @@
 // src/App.jsx
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from "react-router-dom";
 
 // Pages
-import Home from './pages/Home'
-import BrowseBooks from './pages/BrowseBooks'
-import BookDetails from './pages/BookDetails'
-import AddBook from './pages/AddBook'
-import NotFound from './pages/NotFound'
+import Home from "./pages/Home";
+import BrowseBooks from "./pages/BrowseBooks";
+import BookDetails from "./pages/BookDetails";
+import AddBook from "./pages/AddBook";
+import NotFound from "./pages/NotFound";
+import "./App.css";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
 
       <Route path="*" element={<NotFound />} />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

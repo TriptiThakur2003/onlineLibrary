@@ -1,42 +1,209 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app-wrapper {
+  background-color: #fce2d1;
+}
+.formCard {
+  max-width: 600px;
+}
+.maxWidthh {
+  max-width: 1100px !important;
+}
+.mainText {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.text-brown {
+  color: #5a3c3d;
+} /* Orange Button */
+.btn-orange {
+  background-color: #ff7e00;
+  border-color: #ff7e00;
+  color: #fff;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 126, 0, 0.25);
+  transform: translateY(0) scale(1);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Hover Animation */
+.btn-orange:hover {
+  background-color: #e86f00;
+  border-color: #e86f00;
+  color: #fff;
+
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 126, 0, 0.35);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.booksImage {
+  width: 50%;
+}
+
+/* Category Cards */
+.category-card {
+  background: linear-gradient(135deg, #fff3e6, #ffffff);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Category Images */
+.category-img {
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-card:hover .category-img {
+  transform: scale(1.1);
+}
+
+/* =======================
+   MODERN GLASS NAVBAR
+======================= */
+
+.custom-navbar {
+  top: 20px !important;
+  width: 100%;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 999px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  transition: all 0.35s ease;
+}
+.formCard input[type="text"] {
+  transition: all 0.3s ease;
+}
+
+.formCard input[type="text"]:focus {
+  box-shadow: 0 0 10px rgba(255, 126, 0, 0.4);
+  border-color: #ff7e00;
+}
+
+/* Navbar subtle hover lift */
+.custom-navbar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.16);
+}
+
+/* =======================
+   BRAND
+======================= */
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ff7e00 !important;
+  letter-spacing: 0.4px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #e86f00 !important;
+  transform: scale(1.05);
+}
+
+/* =======================
+   NAV LINKS
+======================= */
+.custom-link {
+  position: relative;
+  font-weight: 500;
+  color: #333 !important;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+/* Hover background glow */
+.custom-link:hover {
+  color: #ff7e00 !important;
+  background: rgba(255, 126, 0, 0.12);
+}
+
+/* Underline animation */
+.custom-link::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ff7e00;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.custom-link:hover::after {
+  width: 60%;
+}
+
+/* Active state */
+.custom-link.active {
+  color: #ff7e00 !important;
+  background: rgba(255, 126, 0, 0.15);
+}
+
+.custom-link.active::after {
+  width: 60%;
+}
+
+/* =======================
+   TOGGLER (MOBILE)
+======================= */
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* =======================
+   MOBILE OPTIMIZATION
+======================= */
+@media (max-width: 767px) {
+  .custom-navbar {
+    border-radius: 24px;
+    padding: 14px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-nav {
+    margin-top: 12px;
+  }
+
+  .custom-link {
+    justify-content: center;
+    display: flex;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 767px) {
+  .mainText {
+    text-align: center;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .nav-link {
+    justify-content: center;
+    display: flex !important;
+  }
+  .booksImage {
+    width: 100% !important;
+  }
 }

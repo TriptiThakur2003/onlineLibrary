@@ -1,8 +1,8 @@
 // src/pages/NotFound.jsx
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from "react-router-dom";
 
 function NotFound() {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <div className="container text-center mt-5">
@@ -17,7 +17,7 @@ function NotFound() {
         Go Back to Home
       </Link>
     </div>
-  )
+  );
 }
 
-export default NotFound
+export default NotFound;
